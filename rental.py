@@ -6,5 +6,16 @@ with open(file_path, 'r') as file:
     matches = pattern.findall(text)
     print(matches)
 
+
+# create a property class
 class Property:
+    def __init__(self, square_feet='', beds='',
+            baths='', **kwargs):
+        super().__init__(**kwargs)
+        self.square_feet = square_feet
+        self.num_bedrooms = beds
+        self.num_baths = baths
     
+
+
+
